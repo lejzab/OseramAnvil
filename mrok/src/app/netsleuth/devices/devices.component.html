@@ -11,9 +11,9 @@
         </thead>
         <tbody>
             @for (device of data; track device.id) {
-            <tr>
+            <tr [ngClass]="{'expanded-row': expandedRowIndex === device.id}">
                 <td>
-                    <button (click)="toggleDetails(device.id)">rozwiń</button>
+                    <button (click)="toggleDetails(device.id)">&#43;</button>
                 </td>
                 <td>{{ device.name }}</td>
                 <td>{{ device.ip }}</td>
@@ -21,6 +21,7 @@
             </tr>
             @if (expandedRowIndex === device.id) {
             <tr class="expanded-row">
+                <td></td>
                 <td colspan="3">
                     <div>{{device.details}}</div>
                 </td>
