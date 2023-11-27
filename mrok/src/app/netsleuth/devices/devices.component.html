@@ -1,0 +1,32 @@
+<section>
+    <h3>devices</h3>
+    <table>
+        <thead>
+            <tr>
+                <th> </th>
+                <th>autoname</th>
+                <th>ip address</th>
+                <th>location</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (device of data; track device.id) {
+            <tr>
+                <td>
+                    <button (click)="toggleDetails(device.id)">rozwiń</button>
+                </td>
+                <td>{{ device.name }}</td>
+                <td>{{ device.ip }}</td>
+                <td>{{ device.location}}</td>
+            </tr>
+            @if (expandedRowIndex === device.id) {
+            <tr class="expanded-row">
+                <td colspan="3">
+                    <div>{{device.details}}</div>
+                </td>
+            </tr>
+            }
+            }
+        </tbody>
+    </table>
+</section>
