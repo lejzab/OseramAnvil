@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { DevicesComponent } from "./netsleuth/devices/devices.component";
 
 @Component({
@@ -8,7 +8,7 @@ import { DevicesComponent } from "./netsleuth/devices/devices.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, DevicesComponent]
+    imports: [CommonModule, RouterModule, DevicesComponent]
 })
 export class AppComponent {
   title = 'mrok';

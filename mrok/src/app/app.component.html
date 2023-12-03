@@ -1,4 +1,18 @@
-<router-outlet>
-  <div>no cześć</div>
-  <app-devices></app-devices>
-</router-outlet>
+<main>
+  <nav>
+    <img class="brand-logo" src="/assets/logo.png" alt="logo" aria-hidden="true" />
+    <ul>
+      <li><a [routerLink]="['/devices']">devices</a></li>
+      <li><a [routerLink]="['/locations']">locations</a></li>
+    </ul>
+  </nav>
+  <!-- <a [routerLink]="['/']">
+    <div class="brand-name">
+      
+    </div>
+  </a> -->
+  <section class="content">
+    <router-outlet>
+    </router-outlet>
+  </section>
+</main>
