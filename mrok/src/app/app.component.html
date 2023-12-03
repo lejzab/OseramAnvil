@@ -1,7 +1,11 @@
 <main>
   <nav>
-    <img class="brand-logo" src="/assets/logo.png" alt="logo" aria-hidden="true" />
     <ul>
+      <li>
+        <a [routerLink]="['/']">
+          <img class="brand-logo" src="/assets/logo.png" alt="logo" aria-hidden="true" />
+        </a>
+      </li>
       <li><a [routerLink]="['/devices']">devices</a></li>
       <li><a [routerLink]="['/locations']">locations</a></li>
     </ul>

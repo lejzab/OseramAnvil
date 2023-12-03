@@ -12,11 +12,21 @@ import { NetsleuthService } from '../netsleuth.service';
   imports: [CommonModule, DevicestableComponent]
 })
 export class DevicesComponent {
-  
+
   deviceList: Device[] = [];
   filteredDeviceList: Device[] = [];
 
   constructor(private netsleuthService: NetsleuthService) {
     this.deviceList = this.netsleuthService.getAllDevices();
+    this.filteredDeviceList = this.deviceList.slice(0, 10);
+  }
+
+  filterDevices(filtter: string) {
+    if (filtter.length === 0) {
+      this.filteredDeviceList = this.deviceList.slice(0, 10);
+    } else {
+
+      this.filteredDeviceList = this.deviceList.filter(device => device?.name.toLowerCase().includes(filtter.toLowerCase()));
+    }
   }
 }
