@@ -11,7 +11,7 @@
         @for (device of deviceList; track device.id) {
         <tr [ngClass]="{'expanded-row': expandedRowIndex === device.id}">
             <td>
-                <button (click)="toggleDetails(device.id)">&#43;</button>
+                <button (click)="toggleDetails(device.id)">{{ device.id === expandedRowIndex ? '&#9660;' : '&#9654;' }}</button>
             </td>
             <td>{{ device.name }}</td>
             <td>{{ device.ip }}</td>

@@ -1,4 +1,11 @@
 <section>
     <h3>devices</h3>
-    <app-devicestable [deviceList]="deviceList"></app-devicestable>
+    <section class="filters">
+        <form>
+            <input type="text" placeholder="filter devices" />
+        </form>
+    </section>
+    <section class="" results>
+        <app-devicestable [deviceList]="deviceList" />
+    </section>
 </section>
