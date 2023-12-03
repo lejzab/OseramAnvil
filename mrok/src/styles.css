@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+.brand-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.filters {
+    border-style: solid;
+    border-radius: 0.5em;
+    border-color: darkcyan;
+    padding: 1em;
+}
+
+
+nav {
+    background-color: #f0f0f0; /* Jasne tło */
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Wyrównanie elementów na tej samej wysokości */
+  }
+
+  li {
+    margin-right: 20px; /* Odstęp między elementami menu */
+  }
+
+  a {
+    text-decoration: none;
+    color: #333; /* Ciemny kolor tekstu */
+  }
+
+  .brand-logo {
+    height: 30px; /* Dostosuj wysokość loga według potrzeb */
+  }

@@ -1,0 +1,11 @@
+<section>
+    <h3>devices</h3>
+    <section class="filters">
+        <!-- <form> -->
+            <input type="text" placeholder="filter devices" #filter (keyup)="filterDevices(filter.value)"/>
+        <!-- </form> -->
+    </section>
+    <section class="" results>
+        <app-devicestable [deviceList]="filteredDeviceList" />
+    </section>
+</section>
